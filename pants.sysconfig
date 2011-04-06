@@ -1,0 +1,8 @@
+#/etc/sysconfig/pants
+# this file is for storing the SERVEFILE and LISTENPORT varibles for the pants script
+
+# LISTENPORT -- which TCP port should the pants daemon bind to? defaults to 50100
+#LISTENPORT=50100
+
+# SERVEFILE -- which file should the pants daemon send to the client upon receiving a connection? defaults to /etc/pants.file
+SERVEFILE=/etc/pants.file

@@ -1,0 +1,8 @@
+Create sysconfig file
+locate GPL licence or decide on Creative Commons
+another translation?
+add condrestart?
+rename all files so they live better:
+	pants.sysv
+	pants.server.c
+	pants.sysconfig
