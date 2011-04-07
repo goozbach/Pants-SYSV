@@ -1,8 +1,26 @@
 #!/bin/bash
 
-# The Pants SYS-V script written to demonstrate the correct way to create a SYS-V script.
-# (c) 2005 Derek Carter <derek@gurulabs.com> released under the GPL this script may be copied and distribtuted under the terms of the GPL **insert gpl url here**
-# Idea for this script blatenly stolen from Conrad Parker at http://www.vergenet.net/~conrad/scripts/pants.html various improvements have been made this script in its latest incantation should be avalible from http://www.friocorte.com/projects/pants/
+# The Pants SYS-V script written to demonstrate the correct way to create a
+# SYS-V script for Fedora or RedHat Linux systems.
+# Copyright (c) 2005,2011 Derek Carter <goozbach@friocorte.com>
+
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+# Idea for this script blatenly stolen from Conrad Parker at 
+# http://www.vergenet.net/~conrad/scripts/pants.html various improvements have
+# been made this script in its latest incantation should be avalible from
+# https://github.com/goozbach/Pants-SYSV
 
 
 ###### actual script starts here ######
