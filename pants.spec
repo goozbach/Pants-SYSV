@@ -42,8 +42,8 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig --del pants
 
 %changelog
-* Wed Mar 16 2005 Derek Carter <derek@gurulabs.com> - 1.0-2
+* Wed Mar 16 2005 Derek Carter <goozbach@friocorte.com> - 1.0-2
 - fixed bug with sys-v script stopping
 
-* Wed Mar 16 2005 Derek Carter <derek@gurulabs.com> - 1.0-1
+* Wed Mar 16 2005 Derek Carter <goozbach@friocorte.com> - 1.0-1
 - Initial build.
