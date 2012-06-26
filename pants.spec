@@ -1,10 +1,10 @@
 Summary: The Pants SYS-V init script
-Name: pants
-Version: 1.0
-Release: 1
+Name: pants-sysv
+Version: 1.0.0
+Release: 2
 License: GPL
 Group: System Environment/Base
-URL: http://www.friocorte.com/projects/pants
+URL: http://github.com/goozbach/Pants-SYSV
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -39,9 +39,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %preun
 /usr/sbin/userdel pants
+/sbin/service pants stop
 /sbin/chkconfig --del pants
 
 %changelog
+* Tue Jun 26 2012 Derek Carter <goozbach@friocorte.com> 1.0.0-2
+- added service stop in preun
+
+* Tue Jun 26 2012 Derek Carter <goozbach@friocorte.com> 1.0.0-1
+- Moved to semantic versioning
+- fixed url
+
 * Wed Mar 16 2005 Derek Carter <goozbach@friocorte.com> - 1.0-2
 - fixed bug with sys-v script stopping
 
