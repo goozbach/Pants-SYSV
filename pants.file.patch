@@ -1,0 +1,13 @@
+diff --git a/pants.file b/pants.file
+index 9233c05..16f3af3 100644
+--- a/pants.file
++++ b/pants.file
+@@ -5,7 +5,7 @@ You see, the night before I had placed my pants on a hanger which I planned
+ on taking with me to the gym. I had also placed a nice new white shirt on a
+ hanger as well. I woke up that morning, groggy as always, stumbled into the
+ kitchen to grab a small, no, make that large glass of orange juice. You see
+-I'm never quite coherent until I get my shower in the morning so I'm no too
++I'm never quite coherent 'til I get my shower in the morning so I'm not too
+ sure of the size of my glass of orange juice. As a matter of fact I haven't
+ the foggiest if it was even orange juice in the first place. Apple juice it
+ could have been it doesn't matter anyway as it's not all that important. To
