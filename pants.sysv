@@ -130,6 +130,11 @@ restart)
 	restartfunc
 ;;
 
+condrestart)
+        # TODO finish me
+        echo "conditional restart not implemented yet, see the TODO"
+;;
+
 status)
 	# display the status of our service using the echo_statusfunc function
 	echo_statusfunc
