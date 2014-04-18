@@ -1,0 +1,285 @@
+INFO backend.py:1050:  Mock Version: 1.1.38
+DEBUG backend.py:342:  rootdir = /var/lib/mock/epel-6-x86_64/root/
+DEBUG backend.py:343:  resultdir = result
+INFO backend.py:346:  calling preinit hooks
+DEBUG util.py:65:  ensuring that dir exists: /var/cache/mock/epel-6-x86_64/root_cache/
+DEBUG util.py:332:  Executing command: ['tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/epel-6-x86_64/root_cache/cache.tar.gz', '-C', '/var/lib/mock/epel-6-x86_64/root/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/./proc
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/./proc
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/./sys
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/./sys
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/./dev
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/./dev
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/./tmp/ccache
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/./tmp/ccache
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/./var/cache/yum
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/./var/cache/yum
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/cache/yum
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/tmp/ccache
+DEBUG util.py:65:  ensuring that dir exists: /var/cache/mock/epel-6-x86_64/ccache/
+DEBUG backend.py:515:  create skeleton dirs
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/lib/rpm
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/lib/yum
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/lib/dbus
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/log
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/cache/yum
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/etc/rpm
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/tmp
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/tmp/ccache
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/var/tmp
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/etc/yum.repos.d
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/etc/yum
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/proc
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/sys
+DEBUG backend.py:536:  touch required files
+DEBUG util.py:77:  touching file: /var/lib/mock/epel-6-x86_64/root/etc/mtab
+DEBUG util.py:77:  touching file: /var/lib/mock/epel-6-x86_64/root/etc/fstab
+DEBUG util.py:77:  touching file: /var/lib/mock/epel-6-x86_64/root/var/log/yum.log
+DEBUG backend.py:361:  configure yum
+DEBUG backend.py:376:  configure yum priorities
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/etc/yum/pluginconf.d
+DEBUG backend.py:385:  configure yum rhnplugin
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/etc/yum/pluginconf.d
+DEBUG util.py:92:  remove tree: /var/lib/mock/epel-6-x86_64/root/dev
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/dev/pts
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/dev/pts
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/dev/shm
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/dev/shm
+DEBUG backend.py:482:  kver == 2.6.32-431.el6.x86_64
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/epel-6-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/epel-6-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/epel-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/epel-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/epel-6-x86_64/yum_cache/', '/var/lib/mock/epel-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/epel-6-x86_64/ccache/', '/var/lib/mock/epel-6-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.zUaUkm', '/var/lib/mock/epel-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG backend.py:979:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/epel-6-x86_64/root/', '--releasever', '6', 'update']
+DEBUG util.py:332:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/epel-6-x86_64/root/', '--releasever', '6', 'update', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:92:  remove tree: /var/lib/mock/epel-6-x86_64/root/builddir
+DEBUG util.py:332:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:282:  userdel: mockbuild home directory (/builddir) not found
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:282:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:372:  Child return code was: 6
+DEBUG util.py:332:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: /usr/sbin/useradd -o -m -u 500 -g 135 -d /builddir -n mockbuild with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/RPMS
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/RPMS
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/SPECS
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/SPECS
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/BUILD
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/BUILD
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:65:  ensuring that dir exists: /var/lib/mock/epel-6-x86_64/root/builddir/build/originals
+DEBUG util.py:68:  creating dir: /var/lib/mock/epel-6-x86_64/root/builddir/build/originals
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+INFO backend.py:652:  Installed packages:
+DEBUG util.py:332:  Executing command: rpm --root /var/lib/mock/epel-6-x86_64/root/ -qa with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:282:  setup-2.8.14-20.el6_4.1.noarch
+DEBUG util.py:282:  filesystem-2.4.30-3.el6.x86_64
+DEBUG util.py:282:  tzdata-2014b-1.el6.noarch
+DEBUG util.py:282:  ncurses-base-5.7-3.20090208.el6.x86_64
+DEBUG util.py:282:  glibc-common-2.12-1.132.el6.x86_64
+DEBUG util.py:282:  ncurses-libs-5.7-3.20090208.el6.x86_64
+DEBUG util.py:282:  libattr-2.4.44-7.el6.x86_64
+DEBUG util.py:282:  zlib-1.2.3-29.el6.x86_64
+DEBUG util.py:282:  db4-4.7.25-18.el6_4.x86_64
+DEBUG util.py:282:  nspr-4.10.2-1.el6_5.x86_64
+DEBUG util.py:282:  libacl-2.2.49-6.el6.x86_64
+DEBUG util.py:282:  gmp-4.3.1-7.el6_2.2.x86_64
+DEBUG util.py:282:  chkconfig-1.3.49.3-2.el6_4.1.x86_64
+DEBUG util.py:282:  libsepol-2.0.41-4.el6.x86_64
+DEBUG util.py:282:  sed-4.2.1-10.el6.x86_64
+DEBUG util.py:282:  audit-libs-2.2-2.el6.x86_64
+DEBUG util.py:282:  readline-6.0-4.el6.x86_64
+DEBUG util.py:282:  libcom_err-1.41.12-18.el6.x86_64
+DEBUG util.py:282:  lua-5.1.4-4.1.el6.x86_64
+DEBUG util.py:282:  binutils-2.20.51.0.2-5.36.el6.x86_64
+DEBUG util.py:282:  expat-2.0.1-11.el6_2.x86_64
+DEBUG util.py:282:  nss-softokn-3.14.3-10.el6_5.x86_64
+DEBUG util.py:282:  xz-4.999.9-0.3.beta.20091007git.el6.x86_64
+DEBUG util.py:282:  pcre-7.8-6.el6.x86_64
+DEBUG util.py:282:  diffutils-2.8.1-28.el6.x86_64
+DEBUG util.py:282:  libtasn1-2.3-3.el6_2.1.x86_64
+DEBUG util.py:282:  libuuid-2.17.2-12.14.el6.x86_64
+DEBUG util.py:282:  gdbm-1.8.0-36.el6.x86_64
+DEBUG util.py:282:  perl-Module-Pluggable-3.90-136.el6.x86_64
+DEBUG util.py:282:  perl-libs-5.10.1-136.el6.x86_64
+DEBUG util.py:282:  perl-5.10.1-136.el6.x86_64
+DEBUG util.py:282:  libblkid-2.17.2-12.14.el6.x86_64
+DEBUG util.py:282:  ca-certificates-2013.1.95-65.1.el6_5.noarch
+DEBUG util.py:282:  xz-lzma-compat-4.999.9-0.3.beta.20091007git.el6.x86_64
+DEBUG util.py:282:  upstart-0.6.5-13.el6_5.3.x86_64
+DEBUG util.py:282:  libutempter-1.1.5-4.1.el6.x86_64
+DEBUG util.py:282:  elfutils-libs-0.152-1.el6.x86_64
+DEBUG util.py:282:  procps-3.2.8-25.el6.x86_64
+DEBUG util.py:282:  libselinux-utils-2.0.94-5.3.el6_4.1.x86_64
+DEBUG util.py:282:  patch-2.6-6.el6.x86_64
+DEBUG util.py:282:  ppl-0.10.2-11.el6.x86_64
+DEBUG util.py:282:  libstdc++-devel-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  bzip2-1.0.5-7.el6_0.x86_64
+DEBUG util.py:282:  cyrus-sasl-lib-2.1.23-13.el6_3.1.x86_64
+DEBUG util.py:282:  make-3.81-20.el6.x86_64
+DEBUG util.py:282:  libxml2-2.7.6-14.el6.x86_64
+DEBUG util.py:282:  glib2-2.26.1-7.el6_5.x86_64
+DEBUG util.py:282:  dbus-glib-0.86-6.el6.x86_64
+DEBUG util.py:282:  glibc-devel-2.12-1.132.el6.x86_64
+DEBUG util.py:282:  ncurses-5.7-3.20090208.el6.x86_64
+DEBUG util.py:282:  less-436-10.el6.x86_64
+DEBUG util.py:282:  cracklib-2.8.16-4.el6.x86_64
+DEBUG util.py:282:  coreutils-libs-8.4-31.el6_5.1.x86_64
+DEBUG util.py:282:  pam-1.1.1-17.el6.x86_64
+DEBUG util.py:282:  hwdata-0.233-9.1.el6.noarch
+DEBUG util.py:282:  nss-sysinit-3.15.3-6.el6_5.x86_64
+DEBUG util.py:282:  openldap-2.4.23-34.el6_5.1.x86_64
+DEBUG util.py:282:  libsemanage-2.0.43-4.2.el6.x86_64
+DEBUG util.py:282:  keyutils-libs-1.4-4.el6.x86_64
+DEBUG util.py:282:  openssl-1.0.1e-16.el6_5.7.x86_64
+DEBUG util.py:282:  python-libs-2.6.6-52.el6.x86_64
+DEBUG util.py:282:  libcurl-7.19.7-37.el6_4.x86_64
+DEBUG util.py:282:  rpm-libs-4.8.0-37.el6.x86_64
+DEBUG util.py:282:  gdb-7.2-60.el6_4.1.x86_64
+DEBUG util.py:282:  mingetty-1.08-5.el6.x86_64
+DEBUG util.py:282:  iptables-1.4.7-11.el6.x86_64
+DEBUG util.py:282:  iputils-20071127-17.el6_4.2.x86_64
+DEBUG util.py:282:  initscripts-9.03.40-2.el6.centos.1.x86_64
+DEBUG util.py:282:  rpm-build-4.8.0-37.el6.x86_64
+DEBUG util.py:282:  gcc-c++-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  which-2.19-6.el6.x86_64
+DEBUG util.py:282:  libgcc-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  centos-release-6-5.el6.centos.11.2.x86_64
+DEBUG util.py:282:  basesystem-10.0-4.el6.noarch
+DEBUG util.py:282:  kernel-headers-2.6.32-431.11.2.el6.x86_64
+DEBUG util.py:282:  nss-softokn-freebl-3.14.3-10.el6_5.x86_64
+DEBUG util.py:282:  glibc-2.12-1.132.el6.x86_64
+DEBUG util.py:282:  bash-4.1.2-15.el6_4.x86_64
+DEBUG util.py:282:  libcap-2.16-5.5.el6.x86_64
+DEBUG util.py:282:  info-4.13a-8.el6.x86_64
+DEBUG util.py:282:  bzip2-libs-1.0.5-7.el6_0.x86_64
+DEBUG util.py:282:  nss-util-3.15.3-1.el6_5.x86_64
+DEBUG util.py:282:  libstdc++-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  popt-1.13-7.el6.x86_64
+DEBUG util.py:282:  xz-libs-4.999.9-0.3.beta.20091007git.el6.x86_64
+DEBUG util.py:282:  libselinux-2.0.94-5.3.el6_4.1.x86_64
+DEBUG util.py:282:  elfutils-libelf-0.152-1.el6.x86_64
+DEBUG util.py:282:  shadow-utils-4.1.4.2-13.el6.x86_64
+DEBUG util.py:282:  file-libs-5.04-15.el6.x86_64
+DEBUG util.py:282:  dbus-libs-1.2.24-7.el6_3.x86_64
+DEBUG util.py:282:  gawk-3.1.7-10.el6.x86_64
+DEBUG util.py:282:  libidn-1.18-2.el6.x86_64
+DEBUG util.py:282:  sqlite-3.6.20-1.el6.x86_64
+DEBUG util.py:282:  findutils-4.4.2-6.el6.x86_64
+DEBUG util.py:282:  mpfr-2.4.1-6.el6.x86_64
+DEBUG util.py:282:  grep-2.6.3-4.el6_5.1.x86_64
+DEBUG util.py:282:  cpio-2.10-11.el6_3.x86_64
+DEBUG util.py:282:  p11-kit-0.18.5-2.el6_5.2.x86_64
+DEBUG util.py:282:  pkgconfig-0.23-9.1.el6.x86_64
+DEBUG util.py:282:  perl-Pod-Escapes-1.04-136.el6.x86_64
+DEBUG util.py:282:  perl-Pod-Simple-3.13-136.el6.x86_64
+DEBUG util.py:282:  perl-version-0.77-136.el6.x86_64
+DEBUG util.py:282:  sysvinit-tools-2.87-5.dsf.el6.x86_64
+DEBUG util.py:282:  p11-kit-trust-0.18.5-2.el6_5.2.x86_64
+DEBUG util.py:282:  cpp-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  libnih-1.0.1-7.el6.x86_64
+DEBUG util.py:282:  file-5.04-15.el6.x86_64
+DEBUG util.py:282:  MAKEDEV-3.24-6.el6.x86_64
+DEBUG util.py:282:  elfutils-0.152-1.el6.x86_64
+DEBUG util.py:282:  psmisc-22.6-19.el6_5.x86_64
+DEBUG util.py:282:  net-tools-1.60-110.el6_2.x86_64
+DEBUG util.py:282:  checkpolicy-2.0.22-1.el6.x86_64
+DEBUG util.py:282:  cloog-ppl-0.15.7-1.2.el6.x86_64
+DEBUG util.py:282:  libusb-0.1.12-23.el6.x86_64
+DEBUG util.py:282:  unzip-6.0-1.el6.x86_64
+DEBUG util.py:282:  db4-utils-4.7.25-18.el6_4.x86_64
+DEBUG util.py:282:  libgomp-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  shared-mime-info-0.70-4.el6.x86_64
+DEBUG util.py:282:  gamin-0.1.10-9.el6.x86_64
+DEBUG util.py:282:  glibc-headers-2.12-1.132.el6.x86_64
+DEBUG util.py:282:  gcc-4.4.7-4.el6.x86_64
+DEBUG util.py:282:  groff-1.18.1.4-21.el6.x86_64
+DEBUG util.py:282:  gzip-1.3.12-19.el6_4.x86_64
+DEBUG util.py:282:  cracklib-dicts-2.8.16-4.el6.x86_64
+DEBUG util.py:282:  coreutils-8.4-31.el6_5.1.x86_64
+DEBUG util.py:282:  module-init-tools-3.9-21.el6_4.x86_64
+DEBUG util.py:282:  nss-3.15.3-6.el6_5.x86_64
+DEBUG util.py:282:  nss-tools-3.15.3-6.el6_5.x86_64
+DEBUG util.py:282:  ustr-1.0.4-9.1.el6.x86_64
+DEBUG util.py:282:  libffi-3.0.5-3.2.el6.x86_64
+DEBUG util.py:282:  krb5-libs-1.10.3-15.el6_5.1.x86_64
+DEBUG util.py:282:  python-2.6.6-52.el6.x86_64
+DEBUG util.py:282:  libssh2-1.4.2-1.el6.x86_64
+DEBUG util.py:282:  curl-7.19.7-37.el6_4.x86_64
+DEBUG util.py:282:  rpm-4.8.0-37.el6.x86_64
+DEBUG util.py:282:  ethtool-3.5-1.2.el6_5.x86_64
+DEBUG util.py:282:  policycoreutils-2.0.83-19.39.el6.x86_64
+DEBUG util.py:282:  iproute-2.6.32-31.el6.x86_64
+DEBUG util.py:282:  util-linux-ng-2.17.2-12.14.el6.x86_64
+DEBUG util.py:282:  udev-147-2.51.el6.x86_64
+DEBUG util.py:282:  redhat-rpm-config-9.0.3-42.el6.centos.noarch
+DEBUG util.py:282:  tar-1.23-11.el6.x86_64
+DEBUG util.py:282:  epel-release-6-8.noarch
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/epel-6-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/epel-6-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/epel-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/epel-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/epel-6-x86_64/yum_cache/', '/var/lib/mock/epel-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/epel-6-x86_64/ccache/', '/var/lib/mock/epel-6-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.zUaUkm', '/var/lib/mock/epel-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:92:  remove tree: /var/lib/mock/epel-6-x86_64/root/builddir/build/SOURCES
+DEBUG backend.py:885:  Copying package to result dir
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/epel-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:332:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/epel-6-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:372:  Child return code was: 0
+DEBUG util.py:120:  kill orphans
+DEBUG util.py:92:  remove tree: /var/lib/mock/epel-6-x86_64.tmp
+INFO backend.py:227:  chroot (/var/lib/mock/epel-6-x86_64) unlocked and deleted
+DEBUG util.py:120:  kill orphans

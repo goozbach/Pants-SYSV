@@ -1,0 +1,150 @@
+#!/bin/bash
+
+# The Pants SYS-V script written to demonstrate the correct way to create a
+# SYS-V script for Fedora or RedHat Linux systems.
+# Copyright (c) 2005,2011 Derek Carter <goozbach@friocorte.com>
+
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+# Idea for this script blatenly stolen from Conrad Parker at 
+# http://www.vergenet.net/~conrad/scripts/pants.html various improvements have
+# been made this script in its latest incantation should be avalible from
+# https://github.com/goozbach/Pants-SYSV
+
+
+###### actual script starts here ######
+# chkconfig: 2345 00 99
+# description: The SYS-V pants script. Make sure you're wearing pants in multi-user mode. A practice in bash programming
+# description[es]: EL escrito pants de SYS-V. Asegurense de llevar los pantalones puesto cuando estes computando multi-usario.
+
+### script initilization goes here ###
+
+# store the parameters passed to the script as the value of ${1} can change inside of functions, etc. We only need the first parameter as most scripts only allow one of the following single parameters at the beginning
+# start stop restart status condrestart probe
+ARG1=${1}
+
+# import various functions to make our script more powerfull, such as the cool green "OK" and red "FAILED" that our scripts can output. 
+# Check to see that the file exists before you source it.
+if [ -f /etc/init.d/functions ]
+then
+	. /etc/init.d/functions
+fi
+# Import the SERVEFILE and LISTENPORT varibles the correct way with a sourced file from /etc/sysconfig/pants
+# Check to see that the file exists before you source it.
+if [ -f /etc/sysconfig/pants ]
+then
+	. /etc/sysconfig/pants
+fi
+# see that the varibles were imported correctly. If not set defaults
+if [ -z ${SERVEFILE} ]
+then
+	SERVEFILE=/etc/pants.file
+fi
+if [ -z ${LISTENPORT} ] 
+then
+	LISTENPORT=50100
+fi
+
+# status function, this is our homebrew function, apart from the imported status() function so that we can make sure that we aren't 'double starting' our service. This function should be 'private' as it won't be directly accessable outside our script. It should also come before our other functions (start, stop, restart) so those functions may use it.
+# this status function
+statusfunc() {
+	# contents go here, function should return true if the lock file exists, false if not this function will be used for runtime 'locking'
+	if [ -f /var/lock/subsys/pants ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
+# start function, this function will do all that's nessisary to start our daemon, it will make use of the above statusfunc() to make sure that the service/daemon isn't 'double started'. It should also use the imported action() and daemon() functions from the included file above
+startfunc() {
+	# contents go here, script should use the action function to display sucess or failure and the daemon function to set up the pid.. etc. Make sure to create the lock file or pid file if needed.
+	if statusfunc
+	then
+		action "Already wearing pants. They'll do" /bin/false
+	else
+	        daemon --user=pants /usr/sbin/pants -f ${SERVEFILE} -p ${LISTENPORT}
+	        RETVAL=$?
+	        action 'Starting Pants Service ' /bin/true
+	        pidofproc pants > /var/run/pants.pid
+	        [ $RETVAL = 0 ] && touch /var/lock/subsys/pants
+	        return $RETVAL
+	fi
+}
+
+# stop function, this function serves it's name well, it kills the service in a clean but final way.
+stopfunc() {
+	# contents go here, should use killproc to kill the process, and should use the statusfunc to see that it's running before doing that make sure to clean up your pid files and lock files
+	if statusfunc
+	then
+		echo -n "Stopping pants service"
+		killproc pants
+    rm -f /var/lock/subsys/pants
+		echo
+	else
+		action "Service not running" /bin/false
+	fi
+}
+
+# restart function, the simplest of our functions, it just calls the stop function followed by the start function
+restartfunc() {
+	# a simple stop() followed by a start() not nessicary to echo that we're restarting, it should happen because of the echos from the stop and start functions
+	stopfunc
+	startfunc
+} 
+
+# echo_status function
+echo_statusfunc() {
+	# we need a way of displaying the status to the end user if called with the parameter status. This status function will check for pid or lockfile
+	status /usr/sbin/pants
+}
+
+# main loop/case statement
+# The main loop is done with a case statment, and we no longer call $0 directly, which saves shell instances and makes our scripts more efficent.
+case $ARG1 in 
+
+start)
+	# if our parameter is 'start' we should run this
+	startfunc
+;;
+
+stop)
+	# if our parameter is 'stop' we should run this
+	stopfunc
+;;
+
+restart)
+	# if our parameter is 'restart' we should run this
+	restartfunc
+;;
+
+condrestart)
+        # TODO finish me
+        echo "conditional restart not implemented yet, see the TODO"
+;;
+
+status)
+	# display the status of our service using the echo_statusfunc function
+	echo_statusfunc
+;;
+
+*)
+	# catchall case statement... if we get a parameter that we don't understand show the syntax and exit with and error code of >0
+	echo "Syntax Error... usage: $0 (start|stop|restart|condrestart|status)"
+	exit 1
+;;
+
+# close up that case
+esac
