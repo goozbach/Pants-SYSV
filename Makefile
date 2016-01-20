@@ -31,15 +31,15 @@ install:
 	install -m0644 -D ./pants.file ${ETC_DIR}/pants.file
 	install -m0644 -D ./pants.sysconfig ${ETC_DIR}/sysconfig/pants
 
-tarball: rpmbuild/${VERSION}.tar.gz pants.spec
-
 rpmbuild/${VERSION}.tar.gz:
 	tar -czf rpmbuild/${VERSION}.tar.gz --transform s/./pants-sysv-${VERSION}/ --exclude=rpmbuild --exclude=scratch --exclude=.git .
 
-srpm: rpmbuild/pants-sysv-${VERSION}-${RELEASE}.src.rpm tarball rpmbuild/${VERSION}.tar.gz
+tarball: rpmbuild/${VERSION}.tar.gz pants.spec
 
 rpmbuild/pants-sysv-${VERSION}-${RELEASE}.src.rpm:
 	mock --buildsrpm --resultdir=$(shell pwd)/rpmbuild --sources=$(shell pwd)/rpmbuild --spec=$(shell pwd)/pants.spec
+
+srpm: rpmbuild/pants-sysv-${VERSION}-${RELEASE}.src.rpm tarball rpmbuild/${VERSION}.tar.gz
 
 rpm: rpmbuild/pants-sysv-${VERSION}-${RELEASE}.${ARCH}.rpm srpm
 
