@@ -5,7 +5,7 @@ Release: 3
 License: GPL
 Group: System Environment/Base
 URL: http://github.com/goozbach/Pants-SYSV
-Source0:  https://github.com/goozbach/Pants-SYSV/archive/GIT-TAG.tar.gz#/%{name}-%{version}.tar.gz
+Source0:  https://github.com/goozbach/Pants-SYSV/archive/%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
