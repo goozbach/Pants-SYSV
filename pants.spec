@@ -43,10 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig --del pants
 
 %changelog
-Tue Jan 19 17:03:35 MST 2016
 * Tue Jan 19 2016 Derek Carter <goozbach@friocorte.com> 1.0.0-3
-- adding symantic versioning
-- changing source0 to github
+- adding symantic versioning; changing source0 to github
 
 * Tue Jun 26 2012 Derek Carter <goozbach@friocorte.com> 1.0.0-2
 - added service stop in preun
