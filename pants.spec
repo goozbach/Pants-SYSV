@@ -1,18 +1,18 @@
 Summary: The Pants SYS-V init script
 Name: pants-sysv
-Version: 1.0.0
-Release: 2
+Version: v1.0.0
+Release: 3
 License: GPL
 Group: System Environment/Base
 URL: http://github.com/goozbach/Pants-SYSV
-Source0: %{name}-%{version}.tar.gz
+Source0:  https://github.com/goozbach/Pants-SYSV/archive/GIT-TAG.tar.gz#/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 The SYS-V pants script. Make sure you're wearing pants in multi-user mode. A practice in bash programming
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}               [GitHub]
 
 %build
 make
@@ -43,6 +43,11 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig --del pants
 
 %changelog
+Tue Jan 19 17:03:35 MST 2016
+* Tue Jan 19 2016 Derek Carter <goozbach@friocorte.com> 1.0.0-3
+- adding symantic versioning
+- changing source0 to github
+
 * Tue Jun 26 2012 Derek Carter <goozbach@friocorte.com> 1.0.0-2
 - added service stop in preun
 
