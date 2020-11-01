@@ -1,4 +1,4 @@
-CC = gcc
+CC = gcc -g
 ROOT_DIR ?= /
 PANTS_DAEMON_BIN = pants-server
 PANTS_DAEMON_SRC = pants-server.c 
